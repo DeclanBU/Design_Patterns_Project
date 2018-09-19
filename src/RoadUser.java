@@ -15,7 +15,7 @@ public abstract class RoadUser {
 
 
     public String turnOnHeadLights(){
-        return "Car headlights on for night driving";
+        return "headlights for night driving";
     }
     public abstract String drive();
 

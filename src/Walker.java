@@ -5,9 +5,10 @@ public class Walker extends RoadUser{
 
         @Override
         public String drive() {
-            return "walker can not drive";
+            return "can not drive";
         }
+
         public String turnOnheadLights(){
-            return "walker cannot turn on headlights";
+            return "cannot turn on headlights";
         }
     }
