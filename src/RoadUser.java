@@ -12,6 +12,13 @@ public abstract class RoadUser {
     public String manoveur(){
         return "manoveuring";
     }
+
+
+    public String turnOnHeadLights(){
+        return "Car headlights on for night driving";
+    }
     public abstract String drive();
+
+
 }
 
