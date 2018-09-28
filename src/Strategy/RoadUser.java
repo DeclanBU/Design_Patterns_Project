@@ -20,6 +20,10 @@ public abstract class RoadUser {
         return "manoveuring";
     }
 
+    public void setLightingBehaviour(LightBehaviour lightBehaviour )
+    {
+       this.lightBehaviour=lightBehaviour;
+    }
 
     public String getLightingBehaviour() {
         return lightBehaviour.turnOnLights();

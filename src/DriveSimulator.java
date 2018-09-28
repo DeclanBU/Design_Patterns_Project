@@ -1,3 +1,6 @@
+import Factory.Ambulance;
+import Factory.FireBrigade;
+import Factory.RescueVehicle;
 import Strategy.*;
 
 /**
@@ -28,7 +31,9 @@ public class DriveSimulator {
                             " miles an hour he hit the walker...would have been nicer to be hit " +
                           "\n by a tractor " + tractorDriver.getDrivingBehaviour());
 
-
+        RescueVehicle ambulance = new Ambulance();
+        RescueVehicle fireBrigade = new FireBrigade();
+        System.out.print("The " + ambulance.getRescueType() + " and the " + fireBrigade.getRescueType() + " are on the way");
     }
 }
 

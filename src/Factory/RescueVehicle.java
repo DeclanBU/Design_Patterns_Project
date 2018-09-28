@@ -1,4 +1,4 @@
-package Strategy.Factory;
+package Factory;
 
 /**
  * Created by Declan on 28/09/2018.
@@ -7,8 +7,8 @@ public abstract class RescueVehicle {
 
     private String rescueType;
 
-    public void setRescueType(){
-        this.setRescueType();
+    public void setRescueType(String rescueType){
+        this.rescueType= rescueType;
     }
 
      public String getRescueType()
