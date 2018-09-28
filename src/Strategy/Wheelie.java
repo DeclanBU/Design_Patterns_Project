@@ -7,6 +7,6 @@ public class Wheelie implements DrivingBehaviour{
 
     @Override
     public String drive(){
-        return "doing a wheelie on";
+        return "doing a wheelie ";
     }
 }

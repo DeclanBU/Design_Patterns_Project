@@ -1,9 +1,4 @@
-package Strategy;
-
-import Strategy.CarDriver;
-import Strategy.MotorBikeDriver;
-import Strategy.RoadUser;
-import Strategy.TractorDriver;
+import Strategy.*;
 
 /**
  * Created by t00189550 on 19/09/2018.
@@ -15,7 +10,7 @@ public class DriveSimulator {
         System.out.println("Car Driver can " + carDriver.getDrivingBehaviour());
 
         RoadUser motorBikeDriver = new MotorBikeDriver();
-        System.out.println("Motorbike Driver is " + motorBikeDriver.getDrivingBehaviour() + " a motorbike");
+        System.out.println("Motorbike Driver is " + motorBikeDriver.getDrivingBehaviour() + "on a motorbike");
 
         TractorDriver tractorDriver = new TractorDriver();
         System.out.println("Tractor driver is " + tractorDriver.getDrivingBehaviour() + " a tractor");
@@ -29,6 +24,9 @@ public class DriveSimulator {
         RoadUser newWalker = new Walker();
         System.out.println("Walker " + newWalker.getDrivingBehaviour());
 
+        System.out.println("Walker " + walker.getLightingBehaviour() + " and when a car was " + newCarDriver.getDrivingBehaviour() +
+                            " miles an hour he hit the walker...would have been nicer to be hit " +
+                          "\n by a tractor " + tractorDriver.getDrivingBehaviour());
 
 
     }

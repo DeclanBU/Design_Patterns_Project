@@ -7,6 +7,6 @@ public class DrivingOver60 implements DrivingBehaviour {
 
     @Override
     public String drive(){
-        return "driving over 60 in";
+        return "driving over 60";
     }
 }
