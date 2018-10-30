@@ -1,7 +1,8 @@
-import Factory.Ambulance;
-import Factory.FireBrigade;
-import Factory.RescueVehicle;
+import Factory.Vehicle;
+import Factory.VehicleFactory;
 import Strategy.*;
+
+import javax.swing.*;
 
 /**
  * Created by t00189550 on 19/09/2018.
@@ -28,12 +29,19 @@ public class DriveSimulator {
         System.out.println("Walker " + newWalker.getDrivingBehaviour());
 
         System.out.println("Walker " + walker.getLightingBehaviour() + " and when a car was " + newCarDriver.getDrivingBehaviour() +
-                            " miles an hour he hit the walker...would have been nicer to be hit " +
-                          "\n by a tractor " + tractorDriver.getDrivingBehaviour());
+                " miles an hour he hit the walker...would have been nicer to be hit " +
+                "\n by a tractor " + tractorDriver.getDrivingBehaviour());
 
-        RescueVehicle ambulance = new Ambulance();
-        RescueVehicle fireBrigade = new FireBrigade();
-        System.out.print("The " + ambulance.getRescueType() + " and the " + fireBrigade.getRescueType() + " are on the way");
+       // Vehicle ambulance = new Ambulance();
+      ////  Vehicle fireBrigade = new FireBrigade();
+      //  System.out.print("The " + ambulance.getRescueType() + " and the " + fireBrigade.getRescueType() + " are on the way");
+
+
+
+
+
+
+
     }
 }
 
