@@ -1,3 +1,5 @@
+import Factory.HighSpeedVehicleFactory;
+import Factory.RoadUserVehicleFactory;
 import Factory.Vehicle;
 import Factory.VehicleFactory;
 import Strategy.*;
@@ -37,11 +39,23 @@ public class DriveSimulator {
       //  System.out.print("The " + ambulance.getRescueType() + " and the " + fireBrigade.getRescueType() + " are on the way");
 
 
+        VehicleFactory roadUserVehicleFactory = new RoadUserVehicleFactory();
+        String type = JOptionPane.showInputDialog("If the accident has caused a fire choose 'F' or if needs an ambulance choose A");
 
+        Vehicle vehicle = roadUserVehicleFactory.makeVehicle(type);
 
+        System.out.println("\nRescue team are coming and " + vehicle.drive());
 
+        System.out.println("Rescue team are coming and " + vehicle.quincheFire());
 
+        VehicleFactory highSpeedVehicleFactory = new HighSpeedVehicleFactory();
+        type = JOptionPane.showInputDialog("If the incident needs a Garda on site quickly choose 'B' or if it not needed so quick choose C");
 
+        vehicle = highSpeedVehicleFactory.makeVehicle(type);
+
+        System.out.println("\nRescue team are coming and " + vehicle.drive());
+
+        System.out.println("Rescue team are coming and" + vehicle.quincheFire());
     }
 }
 
