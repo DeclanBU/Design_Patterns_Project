@@ -5,7 +5,7 @@ package Factory;
  */
 public abstract class VehicleFactory {
 
-    public abstract Vehicle makeVehicle(String type);
+    public abstract IVehicle makeVehicle(String type);
 
 
 }
