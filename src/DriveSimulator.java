@@ -38,13 +38,13 @@ public class DriveSimulator {
                 " miles an hour he hit the walker...would have been nicer to be hit " +
                 "\n by a tractor " + tractorDriver.getDrivingBehaviour());
 
-        int fuel = tractorDriver.getCurrentFuel();
-        if (fuel == 50)
+        RoadUser.FUEL_STATE fuel = tractorDriver.getCurrentFuel();
+        if (fuel == RoadUser.FUEL_STATE.FULL_FUEL)
             System.out.print("The tractor is currently full of fuel but after driving for 12 hours its running low");
-            tractorDriver.setCurrentState(10);
-            fuel = tractorDriver.getCurrentFuel();
-        if (fuel == 10)
-            System.out.print("\nThe tractor would want to be filled up with fuel soon!");
+
+            tractorDriver.setCurrentFuel(RoadUser.FUEL_STATE.NEARLY_OUT);
+        if (fuel == RoadUser.FUEL_STATE.NEARLY_OUT)
+            System.out.print("\n The tractor would want to be filled up with fuel soon!");
 
         //IVehicle ambulance = new Ambulance();
         //IVehicle fireBrigade = new FireBrigade();

@@ -1,5 +1,7 @@
 package Strategy;
 
+
+
 /**
  * Created by t00189550 on 18/09/2018.
  */
@@ -8,16 +10,23 @@ public abstract class RoadUser {
     DrivingBehaviour drivingBehaviour;
     LightBehaviour lightBehaviour;
 
-    final int FULL_FUEL = 50;
-    final int HALF_FUEL = 25;
-    final int NEARLY_OUT = 10;
-    final int OUT_OF_FUEL = 0;
-    private int currentFuel;
+
+    public enum FUEL_STATE {
+        FULL_FUEL(50), HALF_FUEL(25), NEARLY_OUT(10), OUT_OF_FUEL(0);
+        private int fuel;
+
+        FUEL_STATE(int fuel) {
+            this.fuel = fuel;
+
+        }
+    }
+    FUEL_STATE currentFuel;
 
     public RoadUser(){
 
-        setCurrentFuel(FULL_FUEL);
+        setCurrentFuel(FUEL_STATE.FULL_FUEL);
     }
+
 
 
     public String brake() {
@@ -37,11 +46,13 @@ public abstract class RoadUser {
     public String getDrivingBehaviour() {
         return drivingBehaviour.drive();
     }
-    public void setCurrentFuel(int fuel){
+    public void setCurrentFuel(FUEL_STATE fuel){
         this.currentFuel = fuel;
     }
 
-    public int getCurrentFuel(){ return currentFuel; }
+    public FUEL_STATE getCurrentFuel() {
+        return currentFuel;
+    }
 
 
 }
