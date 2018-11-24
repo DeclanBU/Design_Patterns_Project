@@ -7,7 +7,10 @@ import Strategy.RoadUser;
  */
 public class TractorDriver extends RoadUser {
 
+
     public TractorDriver(){
+
+        super();
     drivingBehaviour = new DrivingUnder30();
     lightBehaviour = new TurnOnHeadLights(); {
 

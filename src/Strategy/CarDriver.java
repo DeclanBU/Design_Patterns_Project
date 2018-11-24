@@ -6,6 +6,7 @@ package Strategy;
 public class CarDriver extends RoadUser {
 
     public CarDriver(){
+        super();
         drivingBehaviour = new DrivingOver60();
         lightBehaviour = new TurnOnHeadLights();
     }

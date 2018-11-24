@@ -75,7 +75,8 @@ public class DriveSimulator {
 
         Bicycle bike3 = new MountainBike();
         bike3 = new ExtraTenGears(bike3);
-        System.out.print ("\nAnother punter also bought the " + bike3.getModel() + " but wanted the 10 gear offer however the 10 gear offer is " + bike3.cost() + " euros an hour to do extra work ");
+        System.out.print ("\nAnother punter also bought the " + bike3.getModel() + " but wanted the 10 gear offer however the 10 gear offer is " + bike3.cost() +
+                " euros an hour to do extra work ");
 
     }
 }
