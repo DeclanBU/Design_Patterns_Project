@@ -63,6 +63,7 @@ public class DriveSimulator {
 
         //Decorator
         System.out.print("\n    ******ALL BIKES IN THE STORE CAN HAVE 5 0R 10 EXTRA GEARS FITTED AT EXTRA COST*****");
+
         Bicycle bike1 = new Bmx();
         bike1 = new ExtraFiveGears(bike1);
         System.out.print("\nA punter bought an " + bike1.getModel() + " with the 5 gear offer at a cost of " + bike1.cost() + " euros an hour to do extra work");
