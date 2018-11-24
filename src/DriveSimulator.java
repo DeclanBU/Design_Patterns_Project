@@ -4,8 +4,7 @@ import Strategy.MotorBikeDriver;
 import Strategy.RoadUser;
 import Strategy.TractorDriver;
 import Strategy.Walker;
-import decorator.ModifiedBicycle;
-import decorator.Bike;
+import decorator.*;
 
 import javax.swing.*;
 
@@ -14,6 +13,8 @@ import javax.swing.*;
  */
 public class DriveSimulator {
     public static void main(String[] args) {
+
+
 
         CarDriver carDriver = new CarDriver();
         System.out.println("Car Driver can " + carDriver.getDrivingBehaviour());
@@ -51,7 +52,7 @@ public class DriveSimulator {
 
         System.out.println("Rescue team are coming and " + vehicle.quincheFire());
         //Factory
-        VehicleFactory highSpeedVehicleFactory = new HighSpeedVehicleFactory();
+        VehicleFactory highSpeedVehicleFactory = new GardaVehicleFactory();
         type = JOptionPane.showInputDialog("If the incident needs a Garda on site quickly choose 'B' or if it not needed so quick choose C");
 
         vehicle = highSpeedVehicleFactory.makeVehicle(type);
@@ -59,12 +60,21 @@ public class DriveSimulator {
         System.out.println("\nRescue team are coming and" + vehicle.drive());
 
         System.out.println("Rescue team are coming and" + vehicle.quincheFire());
-        //Decorator
-        Bike mountainBike = new ModifiedBicycle();
-        System.out.print("A Road user has bought a bicycle");
-        mountainBike.setModel("Raleigh");
-        System.out.print("\nA Road user is cycling a bicycle made by " + mountainBike.getModel());
 
+        //Decorator
+        System.out.print("\n    ******ALL BIKES IN THE STORE CAN HAVE 5 0R 10 EXTRA GEARS FITTED AT EXTRA COST*****");
+        Bike bike1 = new Bmx();
+        bike1 = new ExtraFiveGears(bike1);
+        System.out.print("\nA punter bought an " + bike1.getModel() + " with the 5 gear offer at a cost of " + bike1.cost() + " euros an hour to do extra work");
+
+
+        Bike bike2 = new MountainBike();
+        bike2 = new ExtraFiveGears(bike2);
+        System.out.print ("\nA different punter bought a " + bike2.getModel() + " and also wanted 5 extra gears which was also " + bike2.cost() + " an hour to do extra work");
+
+        Bike bike3 = new MountainBike();
+        bike3 = new ExtraTenGears(bike3);
+        System.out.print ("\nAnother punter also bought the " + bike3.getModel() + " but wanted the 10 gear offer however the 10 gear offer is " + bike3.cost() + " euros an hour to do extra work ");
 
     }
 }
