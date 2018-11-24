@@ -16,7 +16,7 @@ public abstract class RoadUser {
 
     public RoadUser(){
 
-        setCurrentState(FULL_FUEL);
+        setCurrentFuel(FULL_FUEL);
     }
 
 
@@ -37,8 +37,8 @@ public abstract class RoadUser {
     public String getDrivingBehaviour() {
         return drivingBehaviour.drive();
     }
-    public void setCurrentState(int state){
-        this.currentFuel = state;
+    public void setCurrentFuel(int fuel){
+        this.currentFuel = fuel;
     }
 
     public int getCurrentFuel(){ return currentFuel; }
