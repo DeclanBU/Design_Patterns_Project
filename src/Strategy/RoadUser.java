@@ -8,9 +8,7 @@ public abstract class RoadUser {
     DrivingBehaviour drivingBehaviour;
     LightBehaviour lightBehaviour;
 
-    public String accelerate() {
-        return "accelerating";
-    }
+
 
     public String brake() {
         return " breaking ";
@@ -20,10 +18,6 @@ public abstract class RoadUser {
         return "manoveuring";
     }
 
-    public void setLightingBehaviour(LightBehaviour lightBehaviour )
-    {
-       this.lightBehaviour=lightBehaviour;
-    }
 
     public String getLightingBehaviour() {
         return lightBehaviour.turnOnLights();

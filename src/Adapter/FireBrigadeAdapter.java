@@ -20,6 +20,6 @@ public class FireBrigadeAdapter implements IVehicle {
     @Override
     public String quincheFire()
     {
-        return iFireBrigade.turnOnHose();
+        return iFireBrigade.turnOnSiren();
     }
 }

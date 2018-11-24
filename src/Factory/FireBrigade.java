@@ -14,7 +14,7 @@ public class FireBrigade extends Vehicle implements IFireBrigade {
 
     }
     @Override
-    public String turnOnHose(){
-        return "is turning on the hose from the " + getRescueType();
+    public String turnOnSiren(){
+        return " turned on the loud siren from the " + getRescueType();
     }
 } 
