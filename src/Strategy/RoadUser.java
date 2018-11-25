@@ -36,6 +36,9 @@ public abstract class RoadUser {
     public String getDrivingBehaviour() {
         return drivingBehaviour.drive();
     }
+    public void setdrivingBehaviour(DrivingBehaviour drivingBehaviour){
+        this.drivingBehaviour = drivingBehaviour;
+    }
 
     public void setAlcoholLevel(DrivingState state){
         this.alcoholLevel = state;
