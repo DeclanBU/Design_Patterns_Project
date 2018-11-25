@@ -40,12 +40,15 @@ public abstract class RoadUser {
     public void setAlcoholLevel(DrivingState state){
         this.alcoholLevel = state;
     }
+    public DrivingState getCurrentState()
+    { return alcoholLevel; }
 
     public void gotStopped(String roadUser)
     {
        alcoholLevel.gotStopped(roadUser);
 
     }
+
     public DrivingState getDrunkState() { return drunk; }
     public DrivingState getLuckyState() { return lucky; }
     public DrivingState getSoberState() { return sober; }

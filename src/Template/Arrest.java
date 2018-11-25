@@ -15,7 +15,7 @@ public abstract class Arrest {
             handCuff();
             callBackUp();
 
-        if(guiltyDriver.getAlcoholLevel() == guiltyDriver.getAlcoholLevel()) {
+        if(guiltyDriver.getCurrentState() == guiltyDriver.getDrunkState()) {
             handCuff();
             callBackUp();
 
