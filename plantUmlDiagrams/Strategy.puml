@@ -1,26 +1,47 @@
 @startuml
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+ class Walker extends RoadUser {
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+   public Walker()
+       super();
+       drivingBehaviour = new CantDrive();
+       lightBehaviour = new CannotTurnOnHeadLights();
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
 
-class ArrayList {
-Object[] elementData
-size()
 }
+ class TractorDriver extends RoadUser {
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+
+    public TractorDriver(){
+
+        super();
+    drivingBehaviour = new DrivingUnder30();
+    lightBehaviour = new TurnOnHeadLights(); {
 }
+ class CarDriver extends RoadUser {
 
+    public CarDriver(){
+        super();
+        drivingBehaviour = new DrivingOver60();
+        lightBehaviour = new TurnOnHeadLights();
+
+}
+ interface LightBehaviour {
+    String turnOnLights();
+}
+ class DrivingOver60 implements DrivingBehaviour {
+
+    @Override
+    public String drive(){
+        return "driving over 60";
+  class MotorBikeDriver extends RoadUser {
+
+}
+ class DrivingUnder30 implements DrivingBehaviour {
+
+    @Override
+    public String drive(){
+        return "driving under 30 miles an hour";
+
+}
 @enduml

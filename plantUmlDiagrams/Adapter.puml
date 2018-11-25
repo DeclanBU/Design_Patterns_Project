@@ -1,0 +1,64 @@
+@startuml
+
+
+
+
+  class FireBrigadeAdapter implements IVehicle {
+     private IFireBrigade iFireBrigade;
+
+     FireBrigadeAdapter(IFireBrigade iFireBrigade)
+
+         this.iFireBrigade = iFireBrigade;
+
+    String drive()
+
+         return iFireBrigade.drive();
+
+    String quincheFire()
+
+         return iFireBrigade.turnOnSiren();
+     }
+      interface IFireBrigade {
+    String turnOnSiren();
+    String drive();
+}
+ class FireBrigade extends Vehicle implements IFireBrigade {
+
+
+     FireBrigade(){
+
+        this.setType(" Fire Brigade");
+
+    }
+
+
+ abstract class Vehicle implements IVehicle{
+
+    private String type;
+
+    public void setType(String type){
+        this.type=type;
+
+
+      String getRescueType()
+
+        return type;
+
+    @Override
+     String quincheFire()
+
+      return " are coming to the rescue with a" + getRescueType();
+
+    @Override
+     String drive()
+
+        return " are driving a" + getRescueType();
+
+}
+
+
+
+
+
+
+@enduml

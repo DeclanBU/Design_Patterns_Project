@@ -15,4 +15,5 @@ public class StrategyTest {
         Assert.assertEquals("cannot turn on headlights", walker.getLightingBehaviour());
         Assert.assertNotEquals("Can turn on headlights", walker.getLightingBehaviour());
     }
+
 }
