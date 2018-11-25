@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="graphviz-api-1.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../graphviz-api-1.1.jar/graphviz-api-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -91,8 +91,8 @@ public class DriveSimulator {
 
 
         System.out.println ("\n\n******* Pulled over by GARDAI ********** ");
-
-        String type2 = JOptionPane.showInputDialog("GARDA: Do you know what speed you were doing(Y or N)");
+        String type2;
+        type2 = JOptionPane.showInputDialog("GARDA: Do you know what speed you were doing(Y or N)");
 
         PulledOver pulledOver1 = new BreathiliseTractorDriver(tractorDriver);
         pulledOver1.pulledOver();

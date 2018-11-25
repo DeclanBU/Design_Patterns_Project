@@ -24,7 +24,6 @@ public abstract class PulledOver {
         } else
             stillSpeeding();
             speeding();
-
     }
 
     public void namePlease(){
@@ -36,7 +35,6 @@ public abstract class PulledOver {
         stoppedDriver.setdrivingBehaviour(new DrivingOver60());
         System.out.println( " You were " + stoppedDriver.getDrivingBehaviour());
         breathaliser();
-
     }
     public void stillSpeeding() {
         System.out.println( " Well you were still speeding!! ") ;
