@@ -2,6 +2,8 @@ package Template;
 import Strategy.DrivingOver60;
 import Strategy.RoadUser;
 
+import javax.swing.*;
+
 /**
  * Created by Declan on 25/11/2018.
  */
@@ -13,29 +15,33 @@ public abstract class PulledOver {
     }
 
 
-    public void pulledOver(){
-            namePlease();
-            areYouAfterBooze();
+    public void pulledOver() {
 
-        if(stoppedDriver.getCurrentState() != stoppedDriver.getDrunkState());
-           speeding();
-        }
+
+        String type = JOptionPane.showInputDialog("GARDA: Do you know what speed you were doing(Y or N)");
+        if (type.equals("N")) {
+            speeding();
+        } else
+            stillSpeeding();
+            speeding();
+
+    }
 
     public void namePlease(){
-            System.out.print( " Good evening what is your name please");
+            System.out.println( " Good evening what is your name please");
 
         }
     public void speeding(){
-        System.out.print( " Ok but you were speedeing");
+        System.out.println( " You were speedeing");
         stoppedDriver.setdrivingBehaviour(new DrivingOver60());
-        System.out.print( "GARDA: Here is your ticket .. be more careful ");
+        System.out.println( " You were " + stoppedDriver.getDrivingBehaviour());
+        breathaliser();
 
     }
-    public void areYouAfterBooze() {
-        System.out.print( " Have you been drinking alcohol ") ;
+    public void stillSpeeding() {
+        System.out.println( " Well you were still speeding!! ") ;
     }
-    public void handCuff() {};
-    public void backUpNeeded() {};
-    public abstract void breathaliser();
+    public void breathaliser() {};
+
 }
 

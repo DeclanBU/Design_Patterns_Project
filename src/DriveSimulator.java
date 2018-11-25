@@ -4,6 +4,9 @@ import Strategy.MotorBikeDriver;
 import Strategy.RoadUser;
 import Strategy.TractorDriver;
 import Strategy.Walker;
+import Template.BreathiliseTractorDriver;
+import Template.BreatiliseCarDriver;
+import Template.PulledOver;
 import decorator.*;
 
 import javax.swing.*;
@@ -85,6 +88,17 @@ public class DriveSimulator {
         bike3 = new ExtraTenGears(bike3);
         System.out.print ("\nAnother punter also bought the " + bike3.getModel() + " but wanted the 10 gear offer however the 10 gear offer is " + bike3.cost() +
                 " euros an hour to do extra work ");
+
+
+        System.out.println ("\n\n******* Pulled over by GARDAI ********** ");
+
+        String type2 = JOptionPane.showInputDialog("GARDA: Do you know what speed you were doing(Y or N)");
+
+        PulledOver pulledOver1 = new BreathiliseTractorDriver(tractorDriver);
+        pulledOver1.pulledOver();
+
+        PulledOver pulledOver2 = new BreatiliseCarDriver(carDriver);
+        pulledOver2.pulledOver();
 
     }
 }

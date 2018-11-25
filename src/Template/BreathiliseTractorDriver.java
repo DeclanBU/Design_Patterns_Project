@@ -1,25 +1,32 @@
 package Template;
 
+import Adapter.FireBrigadeAdapter;
+import Factory.Ambulance;
+import Factory.FireBrigade;
+import Factory.IVehicle;
 import Strategy.RoadUser;
+
+import javax.swing.*;
 
 /**
  * Created by Declan on 25/11/2018.
  */
 public class BreathiliseTractorDriver extends PulledOver{
 
-    public BreathiliseTractorDriver(RoadUser driver){
+    public BreathiliseTractorDriver(RoadUser tractorDriver){
 
-        super(driver);
+        super(tractorDriver);
     }
     @Override
     public void breathaliser() {
-        System.out.println("Can you blow into this breathaliser please sir...");
-        if (stoppedDriver.getCurrentState() == stoppedDriver.getLuckyState()) {
-            System.out.println("The farmer had only one pint coming from the bog...luckily");
-            stoppedDriver.setAlcoholLevel(stoppedDriver.getSoberState());
-            System.out.println("Drive on home");
-        } else {
-            System.out.println("Farmer had no drink ");
+        String type = JOptionPane.showInputDialog("Can you blow into breatiliser TractorDriver('F' for fail 'P' for pass)");
+        if (type.equals("P") &&  stoppedDriver.getCurrentState() == stoppedDriver.getSoberState()) {
+
+            System.out.println("\nDrive on home");
+
+
+        } else
+            stoppedDriver.setAlcoholLevel(stoppedDriver.getLuckyState());
+            System.out.println("Put your hands where I can see them");
         }
-    }
 }

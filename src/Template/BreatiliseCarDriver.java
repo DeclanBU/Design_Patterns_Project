@@ -2,6 +2,8 @@ package Template;
 
 import Strategy.RoadUser;
 
+import javax.swing.*;
+
 /**
  * Created by Declan on 25/11/2018.
  */
@@ -13,19 +15,14 @@ public class BreatiliseCarDriver extends PulledOver{
     }
     @Override
     public void breathaliser() {
-        System.out.println("Can you blow into this breathaliser please sir...");
-        if (stoppedDriver.getCurrentState() == stoppedDriver.getDrunkState()) {
-            System.out.println("Please step out of the vehicle sir");
-            stoppedDriver.setAlcoholLevel(stoppedDriver.getDrunkState());
+        String type = JOptionPane.showInputDialog("Can you blow into breatiliser CarDriver('F' for fail 'P' for pass)");
+        if (type.equals("F") &&  stoppedDriver.getCurrentState() == stoppedDriver.getDrunkState()) {
 
-
-        } else {
-            System.out.println("Driver had no drink ");
-        }
-
+            System.out.println("Put your hands where I can see them");
+        } else
+            stoppedDriver.setAlcoholLevel(stoppedDriver.getSoberState());
+        System.out.println("Drive on");
     }
-    @Override
-    public void handCuff(){
-        System.out.println("Put your hands where I can see them");
-    }
+
+
 }
