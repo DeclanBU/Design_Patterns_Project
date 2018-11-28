@@ -18,12 +18,12 @@ public abstract class Vehicle implements IVehicle{
     @Override
     public String quincheFire()
     {
-      return " are coming to the rescue with a" + getRescueType();
+      return "are coming to the rescue with a" + getRescueType();
     }
     @Override
     public String drive()
     {
-        return " are driving a" + getRescueType();
+        return "are driving a" + getRescueType();
     }
 }
 
