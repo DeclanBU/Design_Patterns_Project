@@ -1,0 +1,26 @@
+@startuml
+
+class BreathiliseTractorDriver extends PulledOver{
+
+    public BreathiliseTractorDriver(RoadUser tractorDriver){
+
+        super(tractorDriver);
+
+    public void breathaliser() {
+
+}
+ class BreatiliseCarDriver extends PulledOver{
+
+    public BreatiliseCarDriver(RoadUser carDriver){
+
+        super(carDriver);
+
+
+    public void breathaliser() {
+
+
+
+
+
+}
+@enduml

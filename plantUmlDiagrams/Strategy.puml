@@ -31,9 +31,8 @@
 }
  class DrivingOver60 implements DrivingBehaviour {
 
-    @Override
+    @
     public String drive(){
-        return "driving over 60";
   class MotorBikeDriver extends RoadUser {
 
 }
@@ -44,4 +43,16 @@
         return "driving under 30 miles an hour";
 
 }
+ class Walker extends RoadUser {
+
+   public Walker() {
+       super();
+       drivingBehaviour = new CantDrive();
+       lightBehaviour = new CannotTurnOnHeadLights();
+
+       public interface DrivingBehaviour {
+           String drive();
+
+
+   }
 @enduml

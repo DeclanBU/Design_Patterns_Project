@@ -1,0 +1,379 @@
+@startuml
+ class FireBrigadeAdapter implements IVehicle {
+    private IFireBrigade iFireBrigade;
+
+    public FireBrigadeAdapter(IFireBrigade iFireBrigade
+    public String drive()
+    public String quincheFire()
+
+
+   }
+   interface IFireBrigade {
+       String turnOnSiren();
+       String drive();
+
+   }
+     abstract class Bicycle {
+       public abstract void setModel(String model);
+       public abstract String getModel();
+       public abstract int cost();
+       }
+       class Bmx extends Bicycle {
+           private String model;
+
+
+           public Bmx(){
+               model = " off road bmx";
+
+
+               public void setModel (String model){
+                   this.model = model;
+
+
+               public String getModel () {
+
+
+
+           public int cost()
+
+       }
+       class ExtraFiveGears extends ModifiedBicycle {
+           public String model;
+           Bicycle bike;
+
+
+           public ExtraFiveGears(Bicycle bike)
+               this.bike = bike;
+
+           public void setModel(String model)
+
+
+           public String getModel(){
+
+
+
+           public int cost()
+
+       }
+class ExtraTenGears extends ModifiedBicycle{
+    public String model;
+    Bicycle bike;
+
+
+    public ExtraTenGears(Bicycle bike)
+        this.bike = bike;
+
+
+    public void setModel(String model)
+
+    public String getModel()
+        return bike.getModel();
+
+
+
+    public int cost()
+
+}
+abstract class ModifiedBicycle extends Bicycle {
+
+    public abstract String getModel();
+}
+class MountainBike extends Bicycle {
+    private String model;
+
+
+public MountainBike(){
+    model = "Raleigh Mountain Bicycle";
+
+
+    public void setModel (String model){
+
+
+    public String getModel ()
+
+
+    public int cost() {
+
+}
+class Ambulance extends Vehicle {
+
+
+    public Ambulance(){
+
+        this.setType("Ambulance");
+
+    }
+    class FireBrigade extends Vehicle implements IFireBrigade {
+
+
+        public FireBrigade()
+
+            this.setType(" Fire Brigade");
+
+
+
+        public String turnOnSiren(){
+
+}
+class GardaCar extends Vehicle{
+
+    public GardaCar()
+
+        this.setType(" Garda Car");
+
+}
+class GardaVehicleFactory extends VehicleFactory{
+    @Override
+    public Vehicle makeVehicle(String type) {
+
+
+        if (type.equals("C")) {
+
+            return new GardaCar();
+
+        } else if (type.equals("B")) {
+
+            return new HighSpeedGardaBike();
+
+    }
+class HighSpeedGardaBike extends Vehicle {
+
+    public HighSpeedGardaBike()
+
+        this.setType(" High Speed Garda motorbike");
+
+}
+interface IVehicle {
+    String drive();
+    String quincheFire();
+}
+class RoadUserVehicleFactory extends VehicleFactory{
+
+    public IVehicle makeVehicle(String type){
+
+}
+ abstract class Vehicle implements IVehicle{
+
+    private String type;
+
+    public void setType(String type){
+
+
+     public String getRescueType()
+
+    public String quincheFire()
+
+ String drive()
+
+
+}
+abstract class VehicleFactory {
+
+    public abstract IVehicle makeVehicle(String type);
+
+
+}
+ interface DrivingState {
+    void gotStopped(String character);
+    void gotBreathilised(String character);
+    void gotLucky(String character);
+
+}
+class Drunk implements DrivingState{
+    RoadUser roadUser;
+
+    public Drunk(RoadUser roadUser)
+        this.roadUser = roadUser;
+
+
+    public void gotStopped(String character) {
+        System.out.println(character + " had too much to drink");
+
+
+    public void gotBreathilised(String character) {
+
+    public void gotLucky(String character) {
+
+}
+class Sober implements DrivingState{
+    RoadUser roadUser;
+
+    public Sober(RoadUser roadUser)
+        this.roadUser = roadUser;
+
+    public void gotStopped(String character) {
+
+
+    public void gotBreathilised(String character) {
+
+    public void gotLucky(String character) {
+
+}
+class CannotTurnOnHeadLights implements LightBehaviour {
+
+
+    public String turnOnLights(){
+    }
+class CantDrive implements DrivingBehaviour {
+
+    public String drive(){
+
+}
+class CarDriver extends RoadUser {
+
+    public CarDriver(){
+        super();
+        drivingBehaviour = new DrivingOver60();
+        lightBehaviour = new TurnOnHeadLights();
+
+}
+interface DrivingBehaviour {
+    String drive();
+
+}
+class DrivingOver60 implements DrivingBehaviour {
+
+    public String drive(){
+
+}
+class DrivingUnder30 implements DrivingBehaviour {
+
+    public String drive(){
+
+}
+interface LightBehaviour {
+    String turnOnLights();
+}
+ class MotorBikeDriver extends RoadUser {
+
+    public MotorBikeDriver()
+        drivingBehaviour = new Wheelie();
+
+}
+abstract class RoadUser {
+
+    DrivingBehaviour drivingBehaviour;
+    LightBehaviour lightBehaviour;
+
+
+   DrivingState drunk,sober,lucky,alcoholLevel;
+
+
+    public RoadUser(){
+
+        alcoholLevel = drunk;
+
+
+
+    public String brake()
+
+
+    public String manoveur()
+
+
+
+    public String getLightingBehaviour()
+
+
+
+    public String getDrivingBehaviour() {
+
+    public void setdrivingBehaviour(DrivingBehaviour drivingBehaviour){
+
+
+    public void setAlcoholLevel(DrivingState state){
+
+    public DrivingState getCurrentState()
+
+    public void gotStopped(String roadUser)
+
+
+
+
+    public DrivingState getDrunkState() { return drunk; }
+    public DrivingState getLuckyState() { return lucky; }
+    public DrivingState getSoberState() { return sober; }
+
+
+}
+
+class TractorDriver extends RoadUser {
+
+
+    public TractorDriver(){
+
+        super();
+    drivingBehaviour = new DrivingUnder30();
+    lightBehaviour = new TurnOnHeadLights(); {
+
+
+
+}
+class TurnOnHeadLights implements LightBehaviour {
+
+
+    public String turnOnLights() {
+
+}
+ class Walker extends RoadUser {
+
+   public Walker() {
+       super();
+       drivingBehaviour = new CantDrive();
+       lightBehaviour = new CannotTurnOnHeadLights();
+
+class BreathiliseTractorDriver extends PulledOver{
+
+    public BreathiliseTractorDriver(RoadUser tractorDriver){
+
+        super(tractorDriver);
+
+    public void breathaliser() {
+}
+ class BreatiliseCarDriver extends PulledOver{
+
+    public BreatiliseCarDriver(RoadUser carDriver)
+
+        super(carDriver);
+
+    public void breathaliser()
+
+    }
+    abstract class PulledOver {
+        protected RoadUser stoppedDriver;
+
+        public PulledOver(RoadUser stoppedDriver)
+
+
+
+        public void pulledOver() {
+
+
+
+        public void namePlease()
+
+
+        public void speeding(){
+            breathaliser();
+
+        public void stillSpeeding()
+
+        public void breathaliser()
+
+    }
+    class BreathiliseTractorDriver extends PulledOver{
+
+        public BreathiliseTractorDriver(RoadUser tractorDriver){
+
+            super(tractorDriver);
+
+
+        public void breathaliser()
+
+
+
+
+
+    }
+
+@enduml

@@ -1,7 +1,5 @@
 package decorator;
 
-import Factory.Bicycle;
-
 /**
  * Created by Declan on 24/11/2018.
  */

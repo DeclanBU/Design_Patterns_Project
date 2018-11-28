@@ -1,0 +1,85 @@
+@startuml
+
+  abstract class Bicycle  {
+     abstract void setModel(String model);
+     abstract String getModel();
+    public abstract int cost();
+}
+ class Bmx extends Bicycle {
+    private String model;
+
+
+    public Bmx(){
+
+
+
+         void setModel (String model){
+
+
+
+        public String getModel () {
+
+
+
+    public int cost() {
+
+    }
+    class MountainBike extends Bicycle {
+        private String model;
+
+
+    public MountainBike(){
+
+
+
+         void setModel (String model){
+
+
+
+        public String getModel () {
+
+
+
+        public int cost() {
+
+        }
+        class ExtraTenGears extends ModifiedBicycle{
+            public String model;
+            Bicycle bike;
+
+
+            public ExtraTenGears(Bicycle bike){
+
+
+
+            public void setModel(String model) {
+
+
+
+            public String getModel(){
+                return bike.getModel();
+
+
+
+            public int cost() {
+
+            }
+            class ExtraFiveGears extends ModifiedBicycle {
+                public String model;
+                Bicycle bike;
+
+
+                public ExtraFiveGears(Bicycle bike)
+
+
+                public void setModel(String model)
+
+
+
+                public String getModel(){
+                    return bike.getModel();
+
+                public int cost() {
+
+                }
+@enduml

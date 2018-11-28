@@ -1,7 +1,5 @@
 package decorator;
 
-import Factory.Bicycle;
-
 /**
  * Created by Declan on 24/11/2018.
  */
@@ -10,7 +8,7 @@ public class MountainBike extends Bicycle {
 
 
 public MountainBike(){
-    model = "Raleigh Mountain Bike";
+    model = "Raleigh Mountain Bicycle";
 }
 
     public void setModel (String model){

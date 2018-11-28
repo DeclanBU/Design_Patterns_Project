@@ -1,0 +1,30 @@
+@startuml
+
+ interface DrivingState {
+    void gotStopped(String character);
+    void gotBreathilised(String character);
+    void gotLucky(String character);
+
+    class Drunk implements DrivingState{
+        RoadUser roadUser;
+
+        public Drunk(RoadUser roadUser){
+
+
+        public void gotStopped(String character) {
+
+
+
+        public void gotBreathilised(String character) {
+
+
+        public void gotLucky(String character) {
+
+
+
+
+
+}
+
+
+@enduml

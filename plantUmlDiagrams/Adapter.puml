@@ -12,11 +12,9 @@
 
     String drive()
 
-         return iFireBrigade.drive();
 
     String quincheFire()
 
-         return iFireBrigade.turnOnSiren();
      }
       interface IFireBrigade {
     String turnOnSiren();
@@ -37,22 +35,18 @@
     private String type;
 
     public void setType(String type){
-        this.type=type;
 
 
       String getRescueType()
 
-        return type;
 
-    @Override
      String quincheFire()
 
-      return " are coming to the rescue with a" + getRescueType();
 
-    @Override
+
      String drive()
 
-        return " are driving a" + getRescueType();
+
 
 }
 
