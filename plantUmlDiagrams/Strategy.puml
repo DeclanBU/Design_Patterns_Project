@@ -55,4 +55,17 @@
 
 
    }
+   class CannotTurnOnHeadLights implements LightBehaviour {
+
+
+       public String turnOnLights(){
+           return "cannot turn on headlights";
+
+   }
+   class CantDrive implements DrivingBehaviour {
+
+       public String drive(){
+           return "can not drive";
+
+   }
 @enduml
