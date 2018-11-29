@@ -7,10 +7,10 @@ import javax.swing.*;
 /**
  * Created by Declan on 25/11/2018.
  */
-public abstract class PulledOver {
+public abstract class PullOver {
     protected RoadUser stoppedDriver;
 
-    public PulledOver(RoadUser stoppedDriver) {
+    public PullOver(RoadUser stoppedDriver) {
         this.stoppedDriver = stoppedDriver;
     }
 

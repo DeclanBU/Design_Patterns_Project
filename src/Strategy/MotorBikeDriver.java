@@ -5,7 +5,8 @@ package Strategy;
  */
 public class MotorBikeDriver extends RoadUser {
 
-    public MotorBikeDriver() {
+    public MotorBikeDriver(String userName ) {
+        super(userName);
         drivingBehaviour = new Wheelie();
     }
 }

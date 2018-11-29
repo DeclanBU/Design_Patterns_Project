@@ -5,8 +5,8 @@ package Strategy;
  */
 public class Walker extends RoadUser {
 
-   public Walker() {
-       super();
+   public Walker(String userName) {
+       super(userName);
        drivingBehaviour = new CantDrive();
        lightBehaviour = new CannotTurnOnHeadLights();
    }

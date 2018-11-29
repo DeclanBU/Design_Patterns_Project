@@ -6,6 +6,7 @@ import Factory.FireBrigade;
 import Factory.IVehicle;
 import org.junit.Assert;
 import org.junit.Test;
+
 public class AdaptorTest {
     @Test
     public void TestAdapter(){
@@ -16,5 +17,6 @@ public class AdaptorTest {
         Assert.assertEquals(" turned on the loud siren from the Fire Brigade", fireBrigade.quincheFire());
         Assert.assertNotEquals("turned off the siren ", fireBrigade.drive());
     }
+
 }
 

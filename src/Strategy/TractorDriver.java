@@ -8,9 +8,9 @@ import Strategy.RoadUser;
 public class TractorDriver extends RoadUser {
 
 
-    public TractorDriver(){
+    public TractorDriver(String userName){
 
-        super();
+        super(userName);
     drivingBehaviour = new DrivingUnder30();
     lightBehaviour = new TurnOnHeadLights(); {
 

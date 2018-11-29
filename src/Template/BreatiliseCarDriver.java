@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * Created by Declan on 25/11/2018.
  */
-public class BreatiliseCarDriver extends PulledOver{
+public class BreatiliseCarDriver extends PullOver {
 
     public BreatiliseCarDriver(RoadUser carDriver){
 

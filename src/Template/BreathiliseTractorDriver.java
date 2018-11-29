@@ -1,9 +1,5 @@
 package Template;
 
-import Adapter.FireBrigadeAdapter;
-import Factory.Ambulance;
-import Factory.FireBrigade;
-import Factory.IVehicle;
 import Strategy.RoadUser;
 
 import javax.swing.*;
@@ -11,7 +7,7 @@ import javax.swing.*;
 /**
  * Created by Declan on 25/11/2018.
  */
-public class BreathiliseTractorDriver extends PulledOver{
+public class BreathiliseTractorDriver extends PullOver {
 
     public BreathiliseTractorDriver(RoadUser tractorDriver){
 

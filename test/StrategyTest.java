@@ -6,14 +6,31 @@ import org.junit.Test;
  * Created by Declan on 24/11/2018.
  */
 public class StrategyTest {
+    private RoadUser userName;
 
     @Test
-    public void testStrategy()
-    {
-        RoadUser walker = new Walker();
+    public void testLightingBehaviour() {
+        userName = new Walker("Walker");
 
-        Assert.assertEquals("cannot turn on headlights", walker.getLightingBehaviour());
-        Assert.assertNotEquals("Can turn on headlights", walker.getLightingBehaviour());
+        Assert.assertEquals("cannot turn on headlights", userName.getLightingBehaviour());
+        Assert.assertNotEquals("Can turn on headlights", userName.getLightingBehaviour());
     }
 
+    @Test
+    public void testDrivingBehaviour() {
+
+        userName = new CarDriver(" Car Driver");
+        Assert.assertNotEquals(userName.getUserName() + " can not drive", userName.getDrivingBehaviour());
+        userName.setdrivingBehaviour(new DrivingOver60());
+        Assert.assertEquals("driving over 60", userName.getDrivingBehaviour());
+        userName.setdrivingBehaviour(new CantDrive());
+        Assert.assertNotEquals(userName.getUserName() + "can not drive", userName.getDrivingBehaviour());
+
+    }
+    @Test
+    public void testGetCurrentState(){
+        userName = new CarDriver("Car Driver");
+        Assert.assertEquals(userName.getDrunkState(), userName.getCurrentState());
+        userName.getSoberState();
+    }
 }
