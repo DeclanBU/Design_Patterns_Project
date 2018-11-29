@@ -5,7 +5,7 @@ import java.util.Observer;
 /**
  * Created by Declan on 29/11/2018.
  */
-public class Server implements Observer {
+public class ServerState implements Observer {
 
     private MacDonalds state = MacDonalds.SERVERBUSY;
 
@@ -14,17 +14,20 @@ public class Server implements Observer {
 
         Moving action = (Moving) arg;
         switch (action){
-            case DRIVEUPTO: drive(); break;
+            case DRIVEUPTO: open(); break;
             case COLLECTFOOD: takeOrder(); break;
             case LEAVE: thankYou(); break;
         }
     }
-    private void drive(){
+    public void state(){
+        System.out.println("STATE: " + state.toString());
+    }
+    private void open(){
         System.out.println("The window hatch is open for order");
-        state = MacDonalds.ORDER;
+        state = MacDonalds.READYFORORDER;
     }
     private void takeOrder(){
-        System.out.println("The window hatch remains open for order");
+        System.out.println("The window hatch remains to collect food");
         state = MacDonalds.ORDER;
     }
     private void thankYou(){

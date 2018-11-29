@@ -11,9 +11,9 @@ import org.junit.Test;
 public class TemplateTest {
     @Test
     public void TestTemplateMethod(){
-        PullOver pullOverCarDriver = new BreatiliseCarDriver(new CarDriver("Car Driver "));
+        PullOver pullOverCarDriver = new BreatiliseCarDriver(new CarDriver("Car Customer "));
         Assert.assertNotEquals(null, pullOverCarDriver);
-        PullOver pullOverTracDriver = new BreatiliseCarDriver (new TractorDriver("Tractor Driver"));
+        PullOver pullOverTracDriver = new BreatiliseCarDriver (new TractorDriver("Tractor Customer"));
         Assert.assertNotEquals(null, pullOverTracDriver);
     }
 }

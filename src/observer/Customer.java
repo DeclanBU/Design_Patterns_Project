@@ -5,7 +5,7 @@ import java.util.Observable;
 /**
  * Created by Declan on 29/11/2018.
  */
-public class Driver extends Observable {
+public class Customer extends Observable {
 
         public void approachWindowHatch(){
             System.out.println("Approaching order window");

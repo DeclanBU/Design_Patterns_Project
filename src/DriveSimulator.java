@@ -1,5 +1,7 @@
 import Factory.*;
 import decorator.*;
+import observer.Customer;
+import observer.ServerState;
 
 import javax.swing.*;
 
@@ -8,22 +10,6 @@ import javax.swing.*;
  */
 public class DriveSimulator {
     public static void main(String[] args) {
-
-
-
-
-
-       // RoadUser.ALCOHOL_LEVEL fuel = tractorDriver.getAlcoholLevel();
-       // if (fuel == RoadUser.ALCOHOL_LEVEL.VERY_DRUNK)
-       //     System.out.print("The tractor is currently full of fuel but after driving for 12 hours its running low");
-
-           // tractorDriver.setAlcoholLevel(RoadUser.ALCOHOL_LEVEL.NEARLY_OUT);
-        //if (fuel == RoadUser.ALCOHOL_LEVEL.NEARLY_OUT)
-        //   System.out.print("\n The tractor would want to be filled up with fuel soon!");
-
-        //IVehicle ambulance = new Ambulance();
-        //IVehicle fireBrigade = new FireBrigade();
-        //System.out.print("The " + fireBrigade.quincheFire() + " are on the way");
 
 
         VehicleFactory roadUserVehicleFactory = new RoadUserVehicleFactory();
@@ -62,11 +48,18 @@ public class DriveSimulator {
                 " euros an hour to do extra work ");
 
 
-        System.out.println ("\n\n******* Pulled over by GARDAI ********** ");
-        String type2;
-        type2 = JOptionPane.showInputDialog("GARDA: Do you know what speed you were doing(Y or N)");
+        System.out.println ("\n\n******* MacDonalds DriveThru ********** ");
 
-
+        ServerState window = new ServerState();
+        Customer customer = new Customer();
+        customer.addObserver(window);
+        customer.approachWindowHatch();
+        window.state();
+        customer.orderFood();
+        window.state();
+        customer.foodCollected();
+        window.state();
+        customer.deleteObserver(window);
     }
 }
 

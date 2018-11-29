@@ -19,7 +19,7 @@ public class StrategyTest {
     @Test
     public void testDrivingBehaviour() {
 
-        userName = new CarDriver(" Car Driver");
+        userName = new CarDriver(" Car Customer");
         Assert.assertNotEquals(userName.getUserName() + " can not drive", userName.getDrivingBehaviour());
         userName.setdrivingBehaviour(new DrivingOver60());
         Assert.assertEquals("driving over 60", userName.getDrivingBehaviour());
@@ -29,7 +29,7 @@ public class StrategyTest {
     }
     @Test
     public void testGetCurrentState(){
-        userName = new CarDriver("Car Driver");
+        userName = new CarDriver("Car Customer");
         Assert.assertEquals(userName.getDrunkState(), userName.getCurrentState());
         userName.getSoberState();
     }
