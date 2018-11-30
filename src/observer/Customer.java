@@ -1,11 +1,14 @@
 package observer;
 
+import Factory.IVehicle;
+import Factory.VehicleFactory;
+
 import java.util.Observable;
 
 /**
  * Created by Declan on 29/11/2018.
  */
-public class Customer extends Observable {
+public class Customer extends Observable  {
 
         public void approachWindowHatch(){
             System.out.println("Approaching order window");

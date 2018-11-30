@@ -31,7 +31,7 @@ public class ServerState implements Observer {
         state = MacDonalds.ORDER;
     }
     private void thankYou(){
-        System.out.println("The window hatch is closed");
+        System.out.println("Thank you call again");
         state = MacDonalds.SERVERBUSY;
     }
 

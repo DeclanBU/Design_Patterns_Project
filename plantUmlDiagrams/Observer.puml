@@ -1,0 +1,44 @@
+@startuml
+
+class Customer extends Observable {
+
+        public void approachWindowHatch()
+
+
+        public void orderFood()
+
+
+        public void foodCollected()
+
+    }
+    enum MacDonalds {
+        SERVERBUSY,ORDER,READYFORORDER;
+
+    }
+     enum Moving {
+        DRIVEUPTO,COLLECTFOOD,LEAVE;
+    }
+class ServerState implements Observer {
+
+    private MacDonalds state = MacDonalds.SERVERBUSY;
+
+    public void update(Observable o, Object arg)
+
+        Moving action = (Moving) arg;
+        switch (action)
+            case DRIVEUPTO: open(); break;
+            case COLLECTFOOD: takeOrder(); break;
+            case LEAVE: thankYou(); break;
+
+    public void state()
+        System.out.println("STATE: " + state.toString());
+
+    private void open()
+
+    private void takeOrder()
+
+    private void thankYou()
+
+
+}
+@enduml
