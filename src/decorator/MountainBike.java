@@ -7,7 +7,7 @@ public class MountainBike extends Bicycle {
     private String model;
 
 
-public MountainBike(){
+public MountainBike (){
     model = "Raleigh Mountain Bicycle";
 }
 
