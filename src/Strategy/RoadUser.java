@@ -21,11 +21,11 @@ public abstract class RoadUser {
 
 
     public String brake() {
-        return getUserName() + " breaking ";
+        return getUserName() + " brakes ";
     }
 
     public String manoveur() {
-        return this.getUserName() +  "manoveuring";
+        return this.getUserName() +  " manoveurs";
     }
 
 
