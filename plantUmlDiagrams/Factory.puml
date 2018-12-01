@@ -15,41 +15,25 @@ class Ambulance extends Vehicle {
 
 
      abstract class Vehicle implements IVehicle{
-
-        private String type;
-
+        private String type
         public void setType(String type){
-            this.type=type;
-
-
          public String getRescueType()
-
-            return type;
-
-        @Override
         public String quincheFire()
 
           return " are coming to the rescue with a" + getRescueType();
 
-        @Override
+
         public String drive()
 
-            return " are driving a" + getRescueType();
 
     }
     class FireBrigade extends Vehicle implements IFireBrigade {
-
-
-        public FireBrigade(){
-
+        public FireBrigade()
             this.setType(" Fire Brigade");
 
+        public String turnOnSiren()
 
-        @Override
-        public String turnOnSiren(){
-            return " turned on the loud siren from the " + getRescueType();
-        }
-        interface IFireBrigade {
+        interface IFireBrigade
             String turnOnSiren();
             String drive();
             }
@@ -58,29 +42,20 @@ class Ambulance extends Vehicle {
                 public Vehicle makeVehicle(String type) {
 
 
-                    if (type.equals("C")) {
-
-                        return new GardaCar();
-
-                     else if (type.equals("B")) {
-
-                        return new HighSpeedGardaBike();
-
-                    return null;
                 }
                 class RoadUserVehicleFactory extends VehicleFactory{
                     @Override
                     public IVehicle makeVehicle(String type){
 
-                    if (type.equals("F")) {
-
-                        return new FireBrigadeAdapter(new FireBrigade());
-
-
-                    else if (type.equals("A")) {
-
-                        return new Ambulance();
-
-                    return null;
                 }
+                abstract class VehicleFactory {
+
+                    public abstract IVehicle makeVehicle(String type);
+
+                    public static VehicleFactory getVehicleFactory(String type)
+
+
+                    }
+
+
 @enduml

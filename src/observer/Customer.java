@@ -1,5 +1,8 @@
 package observer;
 
+import Factory.GardaCar;
+import Factory.GardaVehicleFactory;
+import Factory.IVehicle;
 import Strategy.*;
 import Factory.VehicleFactory;
 
@@ -9,12 +12,12 @@ import java.util.Observable;
  * Created by Declan on 29/11/2018.
  */
 public class Customer extends Observable   {
-        String name = "John";
-        RoadUser user = new CarDriver(name);
+
+    RoadUser user = new CarDriver("Dave");
+
         public void approachWindowHatch(){
 
-            System.out.println( user.getUserName() + " is approaching the order window");
-
+            System.out.println( user.getUserName() + user + " is approaching the order window");
             setChanged();
             notifyObservers(Moving.DRIVEUPTO);
         }

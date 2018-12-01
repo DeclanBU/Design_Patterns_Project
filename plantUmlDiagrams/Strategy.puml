@@ -59,13 +59,36 @@
 
 
        public String turnOnLights(){
-           return "cannot turn on headlights";
+
 
    }
    class CantDrive implements DrivingBehaviour {
 
        public String drive(){
-           return "can not drive";
+
+
+   }
+   abstract class RoadUser {
+       String userName;
+       DrivingBehaviour drivingBehaviour;
+       LightBehaviour lightBehaviour;
+      DrivingState drunk,sober,lucky,alcoholLevel;
+       public RoadUser(String userName)
+           alcoholLevel = drunk;
+       public String brake()
+       public String manoveur()
+       public String getLightingBehaviour()
+       public String getUserName()
+        public void setdrivingBehaviour(DrivingBehaviour drivingBehaviour){
+       public void setLightBehaviour(LightBehaviour lightBehaviour){
+       public void setAlcoholLevel(DrivingState state)
+        public DrivingState getCurrentState()
+      public void gotStopped(String roadUser)
+       alcoholLevel.gotStopped(roadUser);
+   public DrivingState getDrunkState()
+       public DrivingState getLuckyState()
+       public DrivingState getSoberState()
+
 
    }
 @enduml

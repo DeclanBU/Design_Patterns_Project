@@ -1,6 +1,6 @@
 @startuml
 
-class BreathiliseTractorDriver extends PulledOver{
+class BreathiliseTractorDriver extends PullOver{
 
     public BreathiliseTractorDriver(RoadUser tractorDriver){
 
@@ -9,18 +9,36 @@ class BreathiliseTractorDriver extends PulledOver{
     public void breathaliser() {
 
 }
- class BreatiliseCarDriver extends PulledOver{
+ class BreatiliseCarDriver extends PullOver{
 
     public BreatiliseCarDriver(RoadUser carDriver){
 
-        super(carDriver);
+        super(carDriver)
 
 
-    public void breathaliser() {
+    public void breathaliser()
+
+}
+abstract class PullOver {
+
+
+    public PullOver(RoadUser stoppedDriver)
+
+
+    public void pulledOver()
 
 
 
 
+    public void namePlease()
+
+
+    public void speeding(){
+
+
+    public void stillSpeeding()
+
+    public void breathaliser()
 
 }
 @enduml

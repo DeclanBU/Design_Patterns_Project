@@ -82,4 +82,8 @@
                 public int cost() {
 
                 }
+                abstract class ModifiedBicycle extends Bicycle {
+
+                    public abstract String getModel();
+                }
 @enduml

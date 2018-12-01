@@ -50,16 +50,16 @@ public class DriveSimulator {
 
         System.out.println ("\n\n******* MacDonalds DriveThru ********** ");
 
-        ServerState window = new ServerState();
+        ServerState server = new ServerState();
         Customer customer = new Customer();
-        customer.addObserver(window);
+        customer.addObserver(server);
         customer.approachWindowHatch();
-        window.state();
+        server.state();
         customer.orderFood();
-        window.state();
+        server.state();
         customer.foodCollected();
-        window.state();
-        customer.deleteObserver(window);
+        server.state();
+        customer.deleteObserver(server);
     }
 }
 

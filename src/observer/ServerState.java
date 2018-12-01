@@ -7,7 +7,7 @@ import java.util.Observer;
  */
 public class ServerState implements Observer {
 
-    private MacDonalds state = MacDonalds.SERVERBUSY;
+    private MacDonalds state = MacDonalds.SERVERWAITING;
 
     @Override
     public void update(Observable o, Object arg) {
@@ -31,8 +31,8 @@ public class ServerState implements Observer {
         state = MacDonalds.ORDER;
     }
     private void thankYou(){
-        System.out.println("Thank you call again");
-        state = MacDonalds.SERVERBUSY;
+        System.out.println("Thank you Server waiting for next customer");
+        state = MacDonalds.SERVERWAITING;
     }
 
 }
