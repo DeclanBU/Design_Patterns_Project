@@ -8,23 +8,34 @@
     class Drunk implements DrivingState{
         RoadUser roadUser;
 
-        public Drunk(RoadUser roadUser){
-
-
-        public void gotStopped(String character) {
-
-
-
-        public void gotBreathilised(String character) {
-
-
-        public void gotLucky(String character) {
-
-
-
-
+        public Drunk(RoadUser roadUser)
+        public void gotStopped(String character)
+        public void gotBreathilised(String character)
+        public void gotLucky(String character)
 
 }
+class Drunk implements DrivingState{
+    RoadUser roadUser;
+
+    public Drunk(RoadUser roadUser){
+
+    public void gotStopped(String character) {
+    public void gotBreathilised(String character) {
+    public void gotLucky(String character) {
+
+}
+class Sober implements DrivingState{
+    RoadUser roadUser;
+
+    public Sober(RoadUser roadUser){
+
+    public void gotStopped(String character) {
+        System.out.println(character + " had no drink");
+
+    public void gotBreathilised(String character) {
 
 
+    public void gotLucky(String character) {
+
+}
 @enduml

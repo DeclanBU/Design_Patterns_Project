@@ -13,12 +13,12 @@ public class Drunk implements DrivingState{
     }
     @Override
     public void gotStopped(String character) {
-        System.out.println(character + " had too much to drink");
+        System.out.println(character + " Stopped by the gardai");
 
     }
     @Override
     public void gotBreathilised(String character) {
-        System.out.println(character + " step out of the vehicle ");
+        System.out.println(character + " over the limit ");
     }
     @Override
     public void gotLucky(String character) {

@@ -16,27 +16,16 @@ class Ambulance extends Vehicle {
 
      abstract class Vehicle implements IVehicle{
         private String type
-        public void setType(String type){
-         public String getRescueType()
-        public String quincheFire()
 
-          return " are coming to the rescue with a" + getRescueType();
-
-
-        public String drive()
-
-
+    }
+    interface IFireBrigade {
+        String turnOnSiren();
+        String drive();
     }
     class FireBrigade extends Vehicle implements IFireBrigade {
         public FireBrigade()
-            this.setType(" Fire Brigade");
 
-        public String turnOnSiren()
-
-        interface IFireBrigade
-            String turnOnSiren();
-            String drive();
-            }
+}
             class GardaVehicleFactory extends VehicleFactory{
                 @Override
                 public Vehicle makeVehicle(String type) {
